@@ -55,7 +55,7 @@
             * default   : DB_N
             */
 
-            'dbname'       => 'bukitmoria',
+            'dbname'       => 'DB_N',
 
 
             /*

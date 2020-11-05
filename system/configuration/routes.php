@@ -50,7 +50,7 @@
      * default      : development
      */
 
-    $route['status']                = 'development';
+    $route['status']                = 'live';
 
 
     /*
