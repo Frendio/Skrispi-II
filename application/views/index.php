@@ -1,0 +1,1 @@
+<?php DEFINED('BASE_URL') OR exit(header('location:403')); ?>

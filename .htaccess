@@ -1,0 +1,32 @@
+#ErrorDocument 400 /400.php
+#ErrorDocument 401 /404.php
+#ErrorDocument 403 /service/error/403_error.php
+#ErrorDocument 404 /system/service/error/404_error.php
+#ErrorDocument 500 /404.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+
+    # AJAX
+    RewriteRule ^ajax/ajax-c$ ajax.php
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^403$ 403.php [QSA,L]
+    # RewriteRule ^configuration/directory$ dir.php [QSA,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>

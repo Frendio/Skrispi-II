@@ -1,0 +1,1 @@
+<?php DEFINED('BASEPATH') OR exit('FORBIDDEN ACCESS'); ?>

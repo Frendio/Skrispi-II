@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('fonts/ufonts.com_century-gothic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'calibri';
+    src: url('fonts/Calibri.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oswald';
+    src: url('fonts/oswald.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SelfDestruct';
+    src: url('fonts/SelfDestructButtonBB_reg.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

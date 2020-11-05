@@ -1,0 +1,220 @@
+/* BUTTON */
+.ML-btn {
+    padding: 7px 5px;
+    cursor: pointer;
+    border: none;
+    font-family: century gothic;
+    background: none;
+    color: #000000;
+    outline: none;
+    text-align: center;
+    font-size: 12px;
+}
+.ML-btn-full {
+    /* padding: 7px 5px; */
+    padding: 8px 0;
+    cursor: pointer;
+    /* width: 94%; */
+    width: 100%;
+    border: none;
+    font-family: century gothic;
+    background: none;
+    color: #000000;
+    outline: none;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* INPUT */
+.cgs-input {
+    width: 100%;
+    height: 100%;
+}
+.ML-input {
+    position: relative;
+    margin: auto;
+    background: none;
+    border: none;
+    /* border-bottom: 1px dashed rgb(182, 182, 182); */
+    padding: 10px 5px;
+    outline: none;
+    font-family: century gothic;
+    font-size: 12px;
+}
+.ML-input-full {
+    position: relative;
+    margin: auto;
+    /* width: 97.70%; */
+    width: 98%;
+    background: none;
+    border: none;
+    padding: 9px 8px;
+    outline: none;
+    font-family: century gothic;
+    font-size: 12px;
+}
+
+/* STYLER */
+.ML-rounded {
+    border-radius: 5px;
+}
+.ML-pill {
+    border-radius: 100px;
+}
+.ML-right {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 34px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.ML-border-primary {
+    border: 2px solid #2393c4;
+}
+.ML-border-warning {
+    border: 2px solid #f1560e;
+}
+.ML-border-success {
+    border: 2px solid #04b983;
+}
+.ML-border-gray {
+    border: 2px solid #ebedf2;
+}
+.ML-border-db {
+    border: 2px solid #6ca844;
+}
+.ML-border-danger {
+    border: 2px solid #d12b39;
+}
+
+.ML-fill-primary {
+    border: 2px solid #2393c4;
+    background: #2393c4;
+}
+.ML-fill-warning {
+    border: 2px solid #f1560e;
+    background: #f1560e;
+}
+.ML-fill-success {
+    border: 2px solid #04b983;
+    background: #04b983;
+}
+.ML-fill-gray {
+    border: 2px solid #ebedf2;
+    background: #ebedf2;
+}
+.ML-fill-danger {
+    box-shadow: 0px 0px 0px 3px #d12b39;
+    background: #d12b39;
+}
+
+/* color */
+.wfc {
+    color: white;
+}
+.btn {
+    padding: 7px 15px;
+}
+
+.lta {
+    text-align: left;
+	position: relative;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: #1b1b1b;
+	/* margin-top: 10px;
+	margin-bottom: 5px; */
+    font-family: century gothic;
+	font-size: 12px;
+}
+.set_error {
+	/* margin-top: 3px;
+	margin-bottom: 5px; */
+	color: rgb(255, 46, 81);
+}/* RIGHT SIDE CONFIGURATION */
+.ml-rs-conf {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 335px;
+    width: 70px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -5px 0px 10px 0px rgb(85, 85, 85);
+    -webkit-transition:All .5s ease;
+    -moz-transition:All .5s ease;
+    -o-transition:All .5s ease;
+    transition: All .5s ease;
+    z-index: 10;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+}
+.ml-ns-link {
+    text-decoration: none;
+}
+.ml-conf-menu {
+    position: relative;
+    display: inline-table;
+    margin: auto;
+    height: 170px;
+    width: 170px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.ml-conf-icon {
+    position: absolute;
+    margin: auto;
+    margin-bottom: 0;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+.ml-rsc {
+    height: 90px;
+    width: 70px;
+    margin: auto;
+    margin-bottom: 30px;
+    display: block;
+}
+.ml-rsc-icon {
+    top: 0;
+    height: 50px;
+    width: 50px;
+}
+.ml-mcolor {
+  color: #1da1f3;
+}
+.ml-conf-menu-name {
+    position: absolute;
+    margin: auto;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: oswald;
+    font-size: 18px;
+    width: 90%;
+    font-weight: 900;
+}
+.ml-rsc-fs {
+    font-size: 12px;
+    bottom: 0;
+}
+.ml-cfc {
+  color: #3C658C;
+}
+.ml-rsc-to-right {
+    right: -100px;
+}

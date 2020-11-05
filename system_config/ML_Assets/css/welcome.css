@@ -1,0 +1,287 @@
+.oc-holder {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.center-holder {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.ln-holder {
+    font-family: SelfDestruct, century gothic;
+    text-align: center;
+    /* font-weight: 600; */
+}
+.ln-made {
+    color: #006d88;
+}
+.ln-line {
+    color: #171d25;
+}
+.ffn, .ffc {
+  color: #171d25;
+  font-family: oswald;
+  font-weight: 600;
+}
+.ffn:hover, .ffc:hover {
+	color: #2089a3;
+}
+.link {
+  text-decoration: none;
+  /* color: black; */
+}
+.mlw-english {
+  left: 0;
+}
+.ml-cfc {
+  color: #3C658C;
+}
+.mlw-configuration {
+  left: 0;
+  right: 0;
+}
+.db_conf, .dir_conf, .route_conf {
+    font-family: oswald;
+    color: #171d25;
+    font-weight: 600;
+}
+.db_conf:hover {
+    color: #31793d;
+}
+.db_con {
+    background: #31793d;
+    color: white;
+}
+.dir_conf:hover {
+    color: #3988a0;
+}
+.dir_con {
+    background: #3988a0;
+    color: white;
+}
+.route_conf:hover {
+    color: #cf502a;
+}
+.route_con {
+    background: #cf502a;
+    color: white;
+}
+.ln-icon {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.06;
+    z-index: -1;
+}
+.lnd-absolute {
+    position: absolute;
+    margin: auto;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1061px) {
+    .ln-icon {
+        height: 60%;
+    }
+    .center-holder {
+        bottom: 5%;
+        top: 0;
+        height: 145px;
+    }
+    .ln-holder {
+        font-size: 150px;
+    }
+    .ln-made, .ln-line {
+        letter-spacing: 50px;
+    }
+    .dot-ml {
+        color: #ffffff;
+        background: #171d25;
+        border-radius: 20px;
+        padding-right: 20px;
+        padding-left: 10px;
+    }
+    .ln-desc {
+        font-size: 14px;
+        letter-spacing: 20px;
+        color: #575757;
+        text-align: center;
+        font-family: oswald, century gothic;
+        font-weight: 600;
+        width: 550px;
+        background: linear-gradient(to right, #429bb1 0%, #1a1a1a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .ln-desc1 {
+        text-align: center;
+        font-family: oswald, century gothic;
+        font-weight: 600;
+        font-size: 14px;
+        width: 550px;
+        letter-spacing: 0;
+        color:#1a1a1a;
+    }
+    .mlw-mholder {
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        top: -10px;
+        left: 0;
+        right: 0;
+        background: url(../background/background3.jpg);
+        width: 820px;
+        padding: 20px 0 15px 0;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-left: 4px solid #DDDDDD;
+        border-right: 4px solid #DDDDDD;
+        border-bottom: 4px solid #DDDDDD;
+        box-shadow: inset 0 -6px 9px -6px #919191, 
+                    inset 7px 0 9px -5px #919191, 
+                    inset -7px 0 9px -5px #919191;
+    }
+    .mlw-menu {
+        position: relative;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        display: inline-table;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .mlw-mname {
+      font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    @media only screen and (min-width: 501px) {
+        .ln-holder {
+            font-size: 85px;
+        }
+        .mlw-mname {
+          font-size: 14px;
+        }
+        .ln-desc {
+            font-size: 14px;
+            letter-spacing: 5px;
+            width: 250px;
+            background: linear-gradient(to right, #429bb1 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ln-desc1 {
+            text-align: center;
+            font-family: oswald, century gothic;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0;
+            color:#1a1a1a;
+        }
+        .mlw-mholder {
+          top: -10px;
+          background: url(../background/background3.jpg);
+          width: 450px;
+          padding: 15px 0 10px 0;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          border-left: 4px solid #DDDDDD;
+          border-right: 4px solid #DDDDDD;
+          border-bottom: 4px solid #DDDDDD;
+          box-shadow: inset 0 -6px 9px -6px #919191, 
+                      inset 7px 0 9px -5px #919191, 
+                      inset -7px 0 9px -5px #919191;
+        }
+        .ln-icon {
+            height: 70%;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .ln-holder {
+            font-size: 45px;
+        }
+        .mlw-mname {
+          font-size: 12px;
+        }
+        .ln-desc {
+            font-size: 14px;
+            letter-spacing: 0px;
+            width: 120px;
+            background: linear-gradient(to right, #429bb1 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ln-desc1 {
+            text-align: center;
+            font-family: oswald, century gothic;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0;
+            color:#1a1a1a;
+        }
+        .mlw-mholder {
+            top: -10px;
+            background: none;
+            max-width: 450px;
+            padding: 15px 0 0 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: none;
+            box-shadow: none;
+        }
+        .ln-icon {
+            width: 70%;
+        }
+    }
+    .center-holder {
+        bottom: 0;
+        top: 0;
+        height: 50px;
+    }
+    .ln-made, .ln-line {
+        letter-spacing: 10px;
+    }
+    .dot-ml {
+        color: #ffffff;
+        background: #171d25;
+        border-radius: 5px;
+        padding-right: 5px;
+        padding-left: 2px;
+    }
+    .ln-desc {
+        color: #575757;
+        text-align: center;
+        font-family: oswald, century gothic;
+        font-weight: 600;
+    }
+    .mlw-mholder {
+      position: absolute;
+      margin: auto;
+      text-align: center;
+      left: 0;
+      right: 0;
+    }
+    .mlw-menu {
+      position: relative;
+      margin: auto;
+      top: 10px;
+      bottom: 0;
+      display: inline-table;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,74 @@
+.ml-toastr-tr {
+    top: 20px;
+    right: 20px;
+    margin-bottom: 20px;
+}
+.ml-toastr-tl {
+    padding: 20px 5px 20px 20px;
+    top: 0;
+    left: 0;
+}
+.ml-toastr-br {
+    padding: 20px 20px 20px 5px;
+    bottom: 0;
+    right: 0;
+}
+.ml-toastr-bl {
+    padding: 20px 5px 20px 20px;
+    bottom: 0;
+    left: 0;
+}
+.ml-toastr {
+    position: fixed;
+    margin: auto;
+    width: 300px;
+    max-height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+}
+.ml-success {
+    background-color: #34bfa3;
+    color: white;
+}
+.ml-warning {
+    background-color: #ffb822;
+    color: #1b1b1b;
+}
+.ml-fail {
+    background-color: #f4516c;
+    color: white;
+}
+.ml-toastr-content:hover {
+    opacity: 1;
+}
+.ml-toastr-content {
+    top: 5px;
+    position: relative;
+    font-size: 12px;
+    font-family: century gothic;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .96;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);
+    -webkit-transition:All .4s ease;
+    -moz-transition:All .4s ease;
+    -o-transition:All .4s ease;
+    transition: All .4s ease;
+    left: 10px;
+    margin-right: 20px;
+}
+.ml-toastr-head {
+    font-size: 14px;
+}
+.ml-toastr-rc {
+    margin-left: 40px;
+}
+.ml-toastr-ind {
+    float: left;
+    font-size: 25px;
+}
+.ml-toastr-hide {
+    display: none;
+}
