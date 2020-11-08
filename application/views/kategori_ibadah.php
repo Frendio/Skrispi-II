@@ -9,6 +9,7 @@
 
 		<!-- Bootstrap CSS -->
 		<?php
+		title('Bukit Moria | Kategori');
 			css('css/bootstrap.min');
 			css('css/main');
 			css('fonts/mdi/css/materialdesignicons.min');
@@ -65,7 +66,7 @@
 			<div class="container">
 			<div class="home_heading text-center">
 				<span class="subheading">Informasi Jemaat</span>
-				<h2>Jadwal <?php echo uri2; ?></h2>
+				<h2>Jadwal <?php echo str_replace('_', ' ', uri2); ?></h2>
 				<p>Bukit Moria Winangun</p>
 			</div>
 
@@ -79,6 +80,7 @@
 									<th>Nama pembicara</th>
 									<th>Tanggal</th>
 									<th>Jam</th>
+									<th>Kolom</th>
 									<th>Tempat</th>
 									<th>Keterangan</th>
 								</tr>
@@ -93,6 +95,7 @@
 										$waktu_mulai	= $row->waktu_mulai;
 										$waktu_selesai	= $row->waktu_selesai;
 										$tempat_ibadah	= $row->tempat_ibadah;
+										$kolom			= $row->kolom ?? '';
 										$catatan	    = $row->catatan;
 
 										?>
@@ -102,6 +105,7 @@
 											<td><?php echo set_data($khotbah); ?></td>
 											<td><?php echo set_data($tanggal); ?></td>
 											<td><?php echo set_data($waktu_mulai.' - '.$waktu_selesai); ?></td>
+											<td><?php echo set_data($kolom); ?></td>
 											<td><?php echo set_data($tempat_ibadah); ?></td>
 											<td><?php echo set_data($catatan); ?></td>
 										</tr>

@@ -54,12 +54,12 @@
 				align-items: center;
 			}		
 			.wrapper #logogmim {
-				width: 90px;
-				margin-bottom: 40px;
+				width: 100px;
+				margin-bottom: 50px;
 			}
 			.wrapper #logogmim img {
 				width: 120%;
-				height: 120%;
+				height: 115%;
 			}
 			.wrapper div:nth-child(2)  {
 				color: white;
@@ -153,7 +153,7 @@
 					letter-spacing: 2px;
 				}
 				.wrapper #logogmim {
-					width: px;
+					width: 80px;
 					height: 35px;
 				}
 			}

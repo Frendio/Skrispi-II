@@ -117,7 +117,7 @@
                                                         <option value="Ibadah Lansia" <?php selected($jadwal->tipe_ibadah, 'Ibadah Lansia'); ?>>Ibadah Lansia</option>
                                                         <option value="Ibadah Kaum Bapa" <?php selected($jadwal->tipe_ibadah, 'Ibadah Kaum Bapa'); ?>>Ibadah Kaum Bapa</option>
                                                         <option value="Ibadah Kaum Ibu" <?php selected($jadwal->tipe_ibadah, 'Ibadah Kaum Ibu'); ?>>Ibadah Kaum Ibu</option>
-                                                        <option value="Ibadah Pemuda & Remaja" <?php selected($jadwal->tipe_ibadah, 'Ibadah Pemuda & Remaja'); ?>>Ibadah Pemuda & Remaja</option>
+                                                        <option value="Ibadah Pemuda dan Remaja" <?php selected($jadwal->tipe_ibadah, 'Ibadah Pemuda dan Remaja'); ?>>Ibadah Pemuda & Remaja</option>
                                                         <option value="Anak Sekolah Minggu" <?php selected($jadwal->tipe_ibadah, 'Anak Sekolah Minggu'); ?>>Ibadah Anak Sekolah Minggu</option>
                                                         <option value="Ibadah Kolom" <?php selected($jadwal->tipe_ibadah, 'Ibadah Kolom'); ?>>Ibadah Kolom</option>
 													</select>
@@ -130,6 +130,14 @@
 												<div class="col-xl-10 col-lg-10">
 													<input class="form-control m-input" type="text" autocomplete="off" name="tempat" placeholder="tempat ibadah" value="<?php echo $jadwal->tempat_ibadah; ?>">
 													<div class="m--font-danger ml_input_eh set_error" id="tempat"></div>
+												</div>
+											</div>
+
+											<div class="form-group m-form__group row">
+												<label class="col-xl-2 col-lg-2 col-form-label">Kolom (Hanya untuk ibada kolom)</label>
+												<div class="col-xl-10 col-lg-10">
+													<input class="form-control m-input" type="number" autocomplete="off" name="kolom" placeholder="kolom" value="<?php echo $jadwal->kolom; ?>">
+													<div class="m--font-danger ml_input_eh set_error" id="kolom"></div>
 												</div>
 											</div>
 

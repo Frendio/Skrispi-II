@@ -28,7 +28,8 @@
                                 tanggal:Tanggal ibadah harus dipilih.,
                                 waktu_m:Waktu mulai ibadah harus dipilih.,
                                 waktu_s:Waktu selesai ibadah harus dipilih.,
-                                tempat:Tempat ibadah harus diisi.');
+                                tempat:Tempat ibadah harus diisi.,
+                                ibadah:Jenis ibadah harus diipilih.');
             
             if($this->form->validate())
             {
@@ -40,6 +41,8 @@
                 $ibadah     = $this->input->post('ibadah');
                 $tempat     = $this->input->post('tempat');
                 $catatan    = $this->input->post('catatan');
+                $kolom      = $this->input->post('kolom');
+                $kolom      = !empty($kolom) ? $kolom : 'null';
 
                 $okhotbah   = uc_all($this->input->post('okhotbah'));
                 $otanggal   = $this->input->post('otanggal');
@@ -66,6 +69,7 @@
                             ->set('tipe_ibadah', $ibadah)
                             ->set('tempat_ibadah', $tempat)
                             ->set('catatan', $catatan)
+                            ->set('kolom', $kolom)
                             ->where('id_jadwal', $id_jadwal)
                             ->update('jadwal_ibadah');
                 

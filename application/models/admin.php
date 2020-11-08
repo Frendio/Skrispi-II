@@ -115,6 +115,14 @@
         {
             return $this->all('jadwal_ibadah')
                         ->where_like('tipe_ibadah', $jenis)
+                        ->order_by('kolom')
+                        ->get();
+        }
+
+        public function semua_kegiatan()
+        {
+            return $this->all('kegiatan')
+                        ->order_by('tanggal_kegiatan')
                         ->get();
         }
 
@@ -129,6 +137,13 @@
         {
             return $this->select('WEEK("'.$date.'") as week')
                         ->get(1);
+        }
+
+        public function ibadah_kolom($kolom)
+        {
+            return $this->all('jadwal_ibadah')
+                        ->where('kolom', $kolom)
+                        ->get();
         }
 
         public function currentTime($type = 1)

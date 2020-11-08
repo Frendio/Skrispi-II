@@ -25,7 +25,8 @@
                                 tanggal:Tanggal ibadah harus dipilih.,
                                 waktu_m:Waktu mulai ibadah harus dipilih.,
                                 waktu_s:Waktu selesai ibadah harus dipilih.,
-                                tempat:Tempat ibadah harus diisi.');
+                                tempat:Tempat ibadah harus diisi.,
+                                ibadah:Jenis ibadah harus diipilih.');
             
             if($this->form->validate())
             {
@@ -36,6 +37,8 @@
                 $ibadah     = $this->input->post('ibadah');
                 $tempat     = $this->input->post('tempat');
                 $catatan    = $this->input->post('catatan');
+                $kolom      = $this->input->post('kolom');
+                $kolom      = !empty($kolom) ? $kolom : 'null';
 
                 $result = $this->admin_model->jadwal_ibadah();
                 foreach($result as $row)
@@ -53,6 +56,7 @@
                             ->data('khotbah', $khotbah)
                             ->data('tipe_ibadah', $ibadah)
                             ->data('tempat_ibadah', $tempat)
+                            ->data('kolom', $kolom)
                             ->data('catatan', $catatan)
                             ->insert('jadwal_ibadah');
                 

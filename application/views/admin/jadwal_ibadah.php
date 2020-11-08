@@ -67,6 +67,7 @@
 														<th>Waktu</th>
 														<th>Tempat</th>
 														<th>Jenis ibadah</th>
+														<th>Kolom</th>
 														<th>Catatan</th>
 														<th>Action</th>
 													</tr>
@@ -84,6 +85,7 @@
 														$waktu_s	= $row->waktu_mulai;
 														$tempat     = $row->tempat_ibadah;
 														$ibadah     = $row->tipe_ibadah;
+														$kolom     	= $row->kolom;
 														$catatan    = $row->catatan;
 														
 														?>
@@ -98,6 +100,7 @@
 															<td><?php echo set_data($waktu_m .' - '. $waktu_s); ?></td>
 															<td><?php echo set_data($tempat); ?></td>
 															<td><?php echo set_data($ibadah); ?></td>
+															<td><?php echo set_data($kolom); ?></td>
 															<td><?php echo set_data($catatan); ?></td>
 															<td>
 																<a href="admin/delete-jadwal/<?php echo $id_jadwal; ?>" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill">

@@ -398,7 +398,7 @@
                     }
                     else
                     {
-                        $Loader->error('system', '404');
+                        self::get_loader($Loader);
                     }
                 }
             } 

@@ -17,8 +17,16 @@
         {
             if(defined('uri2'))
             {
-                $data['kategori']   = $this->admin_model->jadwal_kategori(uri2);
-                $this->view('kategori_ibadah', $data);
+                if(defined('uri3'))
+                {
+                    $data['ibadah_kolom']   = $this->admin_model->ibadah_kolom(uri3);
+                    $this->view('ibadah_kolom', $data);
+                }
+                else
+                {
+                    $data['kategori']   = $this->admin_model->jadwal_kategori(uri2);
+                    $this->view('kategori_ibadah', $data);
+                }
             }
             else
             {

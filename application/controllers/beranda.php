@@ -28,6 +28,8 @@
             $data['birthday']       = $this->admin_model->ulta_anggota($minggu);
             # daftar jadwal
             $data['jadwal_ibadah']  = $this->admin_model->group_jadwal_ibadah();
+            # daftar jadwal
+            $data['kegiatan']       = $this->admin_model->semua_kegiatan();
 
             # load login view
             $this->view('beranda', $data);

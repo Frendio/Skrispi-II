@@ -9,6 +9,7 @@
 
 		<!-- Bootstrap CSS -->
 		<?php
+		title('Bukit Moria | Beranda');
 			css('css/bootstrap.min');
 			css('css/main');
 			css('fonts/mdi/css/materialdesignicons.min');
@@ -22,9 +23,11 @@
 			bar_icon();
 		?>
 		
-		<marquee bgcolor="yellow">  - HUT ke-58 P/KB GMIM, 13 Oktober 2020 :
-		Tema : Pria/Kaum Bapa adalah Mitra Kerja Allah. -     Lomba bertempat di Gereja.       -         Berkumpul Jam 15:00
-		Yohanes 4 : 31 - 38</marquee>
+		<marquee bgcolor="yellow">  - Telah Meninggal Dunia : Uzumaki Naruto umur 25 tahun.
+		
+		
+		- Jemaat Mengalami Sakit : Uciha Sasuke sakit pada kepala. 
+		</marquee>
 		<title>GEREJA | GMIM BUKIT MORIA WINANGUN</title>
 	</head>
 
@@ -75,7 +78,7 @@
 							<div class="subheading">
 							<span>BUKIT MORIA WINANGUN</span>
 							</div>
-							<h1 class="mb-4"> MENJABARKAN TRILGOI PEMBANGUNAN JEMAAT<span></span>  :</h1>
+							<h1 class="mb-4"> MENJABARKAN TRILOGI PEMBANGUNAN JEMAAT<span></span>  :</h1>
 							<p>Tema Bulanan :
 
 							"Mememelihara Keutuhan Ciptaan"
@@ -94,7 +97,7 @@
 							<div class="subheading">
 							<span>Bukit Moria Winangun</span>
 							</div>
-							<h1 class="mb-4">MENJABARKAN TRILGOI PEMBANGUNAN JEMAAT<span></span> </h1>
+							<h1 class="mb-4">MENJABARKAN TRILOGI PEMBANGUNAN JEMAAT<span></span> </h1>
 							<p>
 							Tema Bulanan :
 
@@ -122,9 +125,6 @@
 					1 Korintus 7 : 1 -1</span>  </h4>
 					<div class="welcome_text">
 					<p>
-
-						<img src="info/renungan.PNG" alt="">              
-						<a class="btn btn-primary btn-outline-primary py-2 px-4" href="##"> Renungan</a>
 					</p>
 					</div>
 				</div>
@@ -191,7 +191,7 @@
 					<h2 id="jadwal" class="mb-5">Jadwal Ibadah & Pelayanan</h2>
 				</div>
 				</div>
-				<p class="mb-0"><a href="info/pelayanan.html" class="btn btn-primary">Jadwal Pelayanan</a></p>
+				<p class="mb-0"><a href="" class="btn btn-primary"></a></p>
 
 				<div class="row">
 					<?php
@@ -217,7 +217,7 @@
 									<div class="text p-4 d-flex align-items-center">
 										<div>
 											<span class="time"><?php echo set_data($waktu_m.' - '.$waktu_s); ?></span>
-											<h4><a href="jadwal/<?php echo $tipe_ibadah ?>"><?php echo set_data($tipe_ibadah); ?></a></h4>
+											<h4><a href="jadwal/<?php echo str_replace(' ', '-', $tipe_ibadah); ?>"><?php echo set_data($tipe_ibadah); ?></a></h4>
 											<div class="meta">
 												<p><span class="icon-user mr-1"></span> Khotbah: <a><?php echo set_data($khotbah); ?></a></p>
 												<p><span class="icon-location"></span> Location : <?php echo set_data($tempat_ibadah); ?></p>
@@ -238,69 +238,48 @@
 		<div class="pendeta_home">
 			<div class="container">
 				<div class="home_heading text-center">
-					<span class="subheading">Pimpinan Gereja  </span>
-					<h2>Pendeta Kami & Pembina</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+					<span class="subheading">---------------</span>
+					<h2>Daftar Kegiatan Jemaat</h2>
+					<p>-----------------------</p>
 				</div>
 
 				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo IMAGES_PATH; ?>staf/staff-1.jpg);"></div>
-						</div>
-						<div class="text d-flex align-items-center pt-3 text-center">
-							<div>
-							<h3 class="mb-2">Lloyd Wilson</h3>
-							<span class="position mb-4">Lead Pastor</span>
-							
-							</div>
-						</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo IMAGES_PATH; ?>staf/staff-2.jpg);"></div>
-						</div>
-						<div class="text d-flex align-items-center pt-3 text-center">
-							<div>
-							<h3 class="mb-2">Rachel Parker</h3>
-							<span class="position mb-4">Lead Pastor</span>
-							
-							</div>
-						</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo IMAGES_PATH; ?>staf/staff-3.jpg);"></div>
-						</div>
-						<div class="text d-flex align-items-center pt-3 text-center">
-							<div>
-							<h3 class="mb-2">Ian Smith</h3>
-							<span class="position mb-4">Lead Pastor</span>
-							
-							</div>
-						</div>
+					<div class="col-md-12">
+						<div class="bh_item">
+							<table border="2" style="width:100%;">
+								<tr>
+									<th>No</th>
+									<th>Jenis kegiatan</th>
+									<th>Tempat kegiatan</th>
+									<th>Tanggal kegiatan</th>
+									<th>Waktu kegiatan</th>
+								</tr>
+
+								<?php
+									$no = 0;
+									foreach($kegiatan as $row)
+									{
+										$no++;
+										$jenis_kegiatan		= $row->jenis_kegiatan;
+										$tempat_kegiatan	= $row->tempat_kegiatan;
+										$tanggal_kegiatan	= $row->tanggal_kegiatan;
+										$waktu_kegiatan		= $row->waktu_kegiatan;
+
+										?>
+
+										<tr>
+											<td><?php echo $no; ?></td>
+											<td><?php echo set_data($jenis_kegiatan); ?></td>
+											<td><?php echo set_data($tempat_kegiatan); ?></td>
+											<td><?php echo set_data($tanggal_kegiatan); ?></td>
+											<td><?php echo set_data($waktu_kegiatan); ?></td>
+										</tr>
+
+								<?php } ?>
+							</table>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(<?php echo IMAGES_PATH; ?>staf/staff-4.jpg);"></div>
-						</div>
-						<div class="text d-flex align-items-center pt-3 text-center">
-							<div>
-							<h3 class="mb-2">Alicia Henderson</h3>
-							<span class="position mb-4">Lead Pastor</span>
-							
-							</div>
-						</div>
-						</div>
-					</div>
-					</div>
+				</div>
 			</div>
 		</div>
 
@@ -322,7 +301,7 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 
-				<a class="btn_ah" href="#">Profil Gereja</a>
+				<a class="" href=""></a>
 
 			</div>
 			</div>

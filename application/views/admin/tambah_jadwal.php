@@ -115,11 +115,19 @@
                                                         <option value="Ibadah Lansia">Ibadah Lansia</option>
                                                         <option value="Ibadah Kaum Bapa">Ibadah Kaum Bapa</option>
                                                         <option value="Ibadah Kaum Ibu">Ibadah Kaum Ibu</option>
-                                                        <option value="Ibadah Pemuda & Remaja">Ibadah Pemuda & Remaja</option>
+                                                        <option value="Ibadah Pemuda dan Remaja">Ibadah Pemuda & Remaja</option>
                                                         <option value="Anak Sekolah Minggu">Ibadah Anak Sekolah Minggu</option>
                                                         <option value="Ibadah Kolom">Ibadah Kolom</option>
 													</select>
 													<div class="m--font-danger ml_input_eh set_error" id="ibadah"></div>
+												</div>
+											</div>
+
+											<div class="form-group m-form__group row">
+												<label class="col-xl-2 col-lg-2 col-form-label">Kolom (Hanya untuk ibada kolom)</label>
+												<div class="col-xl-10 col-lg-10">
+													<input class="form-control m-input" type="number" autocomplete="off" name="kolom" placeholder="kolom">
+													<div class="m--font-danger ml_input_eh set_error" id="kolom"></div>
 												</div>
 											</div>
 
