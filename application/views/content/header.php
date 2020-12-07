@@ -86,6 +86,12 @@
                                                             </a>
                                                         </li>
                                                         <li class="m-menu__item" m-menu-link-redirect="1" aria-haspopup="true">
+                                                            <a href="admin/tambah-renungan" class="m-menu__link">
+                                                                <i class="m-menu__link-icon fa fa-plus"></i>
+                                                                <span class="m-menu__link-text">Tambah renungan</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="m-menu__item" m-menu-link-redirect="1" aria-haspopup="true">
                                                             <a href="admin/tambah-user" class="m-menu__link">
                                                                 <i class="m-menu__link-icon fa fa-plus"></i>
                                                                 <span class="m-menu__link-text">Tambah user</span>
@@ -119,7 +125,7 @@
                                     </span>
                                     &nbsp;&nbsp;
                                     <span class="m-topbar__userpic">
-                                        <div style="background: url(<?php echo IMAGES_PATH.'icons/'.$this->session->ug_auth.'.png'; ?>) top; background-size:cover;" class="m--img-rounded m--marginless head-pp"></div>
+                                        <div style="background: url(<?php echo IMAGES_PATH.'icons/'.$this->session->ul_auth.'.png'; ?>) top; background-size:cover;" class="m--img-rounded m--marginless head-pp"></div>
                                     </span>
                                 </a>
                                 
@@ -128,7 +134,7 @@
                                         <div class="m-dropdown__header m--align-center" style="background: url(<?php echo IMAGES_PATH; ?>misc/user_profile_bg.jpg); background-size: cover;">
                                             <div class="m-card-user m-card-user--skin-dark">
                                                 <div class="m-card-user__pic">
-                                                    <div style="background: url(<?php echo IMAGES_PATH.'icons/'.$this->session->ug_auth.'.png'; ?>) top; background-size:cover;" class="m--img-rounded m--marginless head-pp1"></div>
+                                                    <div style="background: url(<?php echo IMAGES_PATH.'icons/'.$this->session->ul_auth.'.png'; ?>) top; background-size:cover;" class="m--img-rounded m--marginless head-pp1"></div>
                                                 </div>
                                                 <div class="m-card-user__details">
                                                     <span class="m-card-user__name m--font-weight-500"><?php echo $this->session->ufn_auth; ?></span>

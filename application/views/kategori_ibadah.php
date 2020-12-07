@@ -44,7 +44,7 @@
 						<a class="nav-link" href="beranda">Beranda<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-						<a class="nav-link" href="tentang_kami.html">Tentang Kami</a>
+						<a class="nav-link" href="beranda/tentang_kami">Tentang Kami</a>
 						</li>
 
 						<!-- <li class="nav-item">
@@ -74,6 +74,10 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="bh_item">
+							<button>
+								<a href="jadwal/print">Print</a>
+							</button>
+
 							<table border="2" style="width:100%;">
 								<tr>
 									<th>No</th>
@@ -90,12 +94,14 @@
 									foreach($kategori as $row)
 									{
 										$no++;
+										$kolom			= $row->kolom ?? '';
+										
+										$row			= $this->admin_model->satu_jadwal_kategori($kolom);
 										$khotbah	    = $row->khotbah;
 										$tanggal	    = $row->tanggal;
 										$waktu_mulai	= $row->waktu_mulai;
 										$waktu_selesai	= $row->waktu_selesai;
 										$tempat_ibadah	= $row->tempat_ibadah;
-										$kolom			= $row->kolom ?? '';
 										$catatan	    = $row->catatan;
 
 										?>
@@ -142,7 +148,7 @@
 						<h2 class="ftco-heading-2"></h2>
 						<ul class="list-unstyled">
 							<li><a href="beranda" class="py-1 d-block"><span class=""></span></a></li>
-							<li><a href="tentang_kami.html" class="py-1 d-block"><span class=""></span></a></li>
+							<li><a href="beranda/tentang_kami" class="py-1 d-block"><span class=""></span></a></li>
 							<li><a href="info_jemaat.html" class="py-1 d-block"><span class=""></span</a></li>
 							<li><a href="jadwal_ibadah.html" class="py-1 d-block"><span class=""></span></a></li>
 

@@ -33,4 +33,10 @@
                 $this->error();
             }
         }
+
+        public function print()
+        {
+            $data['kategori']   = $this->admin_model->jadwal_kategori('Ibadah Kolom');
+            $this->view('print', $data);
+        }
     }

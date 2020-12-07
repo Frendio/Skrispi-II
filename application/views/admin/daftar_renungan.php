@@ -51,7 +51,7 @@
 										<div class="m-portlet__head-caption">
 											<div class="m-portlet__head-title">
 												<h3 class="m-portlet__head-text">
-													Daftar user
+													Daftar renungan
 												</h3>
 											</div>
 										</div>
@@ -62,35 +62,38 @@
 												<thead>
 													<tr>
 														<th>No</th>
-														<th>Nama</th>
-														<th>Username</th>
-														<th>Tipe user</th>
+														<th>Judul renungan</th>
+														<th>Aayat renunan</th>
+														<th>Ringkasan renungan</th>
+														<th>Tanggal</th>
 														<th>Action</th>
 													</tr>
 												</thead>
 												<tbody>
 													<?php
 													$no     = 0;
-													foreach($users as $row)
+													foreach($renungan as $row)
 													{
 														$no++;
-														$user_id    = $row->user_id;
-														$user       = $row->nama_user;
-														$username	= $row->username;
-														$tipe_user  = $row->tipe_user;
+														$id_renungan	= $row->id_renungan;
+														$judul			= $row->judul;
+														$ayat			= $row->ayat;
+														$ringkasan   	= $row->ringkasan;
+														$tanggal   		= $row->tanggal;
 														
 														?>
 														<tr>
 															<td><?php echo $no; ?></td>
 															<td>
-																<a href="admin/ubah-user/<?php echo $user_id; ?>" data-skin="dark" data-toggle="m-tooltip" data-placement="top" title="Lihat">
-																	<?php echo set_data($user); ?>
+																<a href="admin/ubah-renungan/<?php echo $id_renungan; ?>" data-skin="dark" data-toggle="m-tooltip" data-placement="top" title="Lihat">
+																	<?php echo set_data($judul); ?>
 																</a>
 															</td>
-															<td><?php echo $username; ?></td>
-															<td><?php echo $tipe_user; ?></td>
+															<td><?php echo set_data($ayat); ?></td>
+															<td><?php echo set_data($ringkasan); ?></td>
+															<td><?php echo set_data($tanggal); ?></td>
 															<td>
-																<a href="admin/delete-user/<?php echo $user_id; ?>" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill">
+																<a href="admin/delete-renungan/<?php echo $id_renungan; ?>" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill">
 																	<i class="m-menu__link-icon flaticon-delete-1"></i>
 																</a>
 															</td>

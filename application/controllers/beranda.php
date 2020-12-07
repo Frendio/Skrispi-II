@@ -28,10 +28,19 @@
             $data['birthday']       = $this->admin_model->ulta_anggota($minggu);
             # daftar jadwal
             $data['jadwal_ibadah']  = $this->admin_model->group_jadwal_ibadah();
-            # daftar jadwal
-            $data['kegiatan']       = $this->admin_model->semua_kegiatan();
+            # semua kegiatan
+            $data['kegiatan']       = $this->admin_model->semua_kegiatan($minggu);
+            # sakit meninggal
+            $data['SM_minggu']      = $this->admin_model->sakit_meninggal_minggu($minggu);
+            # renungan
+            $data['renungan']       = $this->admin_model->home_renungan();
 
             # load login view
             $this->view('beranda', $data);
+        }
+
+        public function tentang_kami()
+        {
+            $this->view('tentang_kami');
         }
     }

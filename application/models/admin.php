@@ -21,7 +21,9 @@
         
         public function anggota_jemaat()
         {
-            return $this->all('anggota_jemaat')->get();
+            return $this->all('anggota_jemaat')
+                        ->where('kategori', 'Pembicara')
+                        ->get();
         }
         
         public function non_user()
@@ -115,14 +117,23 @@
         {
             return $this->all('jadwal_ibadah')
                         ->where_like('tipe_ibadah', $jenis)
+                        ->group_by('kolom')
                         ->order_by('kolom')
                         ->get();
         }
 
-        public function semua_kegiatan()
+        public function satu_jadwal_kategori($kolom)
+        {
+            return $this->all('jadwal_ibadah')
+                        ->where('kolom', $kolom)
+                        ->order_by('tanggal desc')
+                        ->get(1);
+        }
+
+        public function semua_kegiatan($week)
         {
             return $this->all('kegiatan')
-                        ->order_by('tanggal_kegiatan')
+                        ->where('WEEK(tanggal_kegiatan)', $week)
                         ->get();
         }
 
@@ -130,6 +141,13 @@
         {
             return $this->all('anggota_jemaat')
                         ->where('WEEK(tanggal_lahir)', $week)
+                        ->get();
+        }
+
+        public function sakit_meninggal_minggu($week)
+        {
+            return $this->all('sakit_meninggal')
+                        ->where('WEEK(tanggal)', $week)
                         ->get();
         }
 
@@ -144,6 +162,25 @@
             return $this->all('jadwal_ibadah')
                         ->where('kolom', $kolom)
                         ->get();
+        }
+
+        public function renungan()
+        {
+            return $this->all('renungan')->get();
+        }
+
+        public function satu_renungan($id)
+        {
+            return $this->all('renungan')
+                        ->where('id_renungan', $id)
+                        ->get(1);
+        }
+
+        public function home_renungan()
+        {
+            return $this->all('renungan')
+                        ->order_by('tanggal desc')
+                        ->get(1);
         }
 
         public function currentTime($type = 1)

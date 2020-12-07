@@ -25,7 +25,8 @@
         {
 
             $this->form->input('nl:Nama lengkap harus diisi.,
-                                jk:Jenis kelamin harus dipilih.');
+                                jk:Jenis kelamin harus dipilih.,
+                                kategori:Kategori harus dipilih.');
             
             if($this->form->validate())
             {
@@ -82,6 +83,8 @@
                 $keluarga       = !empty($keluarga) ? $keluarga : 'null';
                 $kolom          = uc_all($this->input->post('kolom'));
                 $kolom          = !empty($kolom) ? $kolom : 'null';
+                $kategori       = $this->input->post('kategori');
+                $kategori       = !empty($kategori) ? $kategori : 'null';
 
                 $result = $this->admin_model->anggota_jemaat();
                 foreach($result as $row)
@@ -124,6 +127,7 @@
                             ->data('keterangan', $keterangan)
                             ->data('nama_keluarga', $keluarga)
                             ->data('nama_kolom', $kolom)
+                            ->data('kategori', $kategori)
                             ->insert('anggota_jemaat');
                 
                 $this->model->close_conn();

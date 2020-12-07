@@ -114,6 +114,23 @@
             $this->view('admin/ubah_sakit_meninggal', $data);
         }
 
+        public function renungan()
+        {
+            $data['renungan']   = $this->admin_model->renungan();
+            $this->view('admin/daftar_renungan', $data);
+        }
+
+        public function tambah_renungan()
+        {
+            $this->view('admin/tambah_renungan');
+        }
+
+        public function ubah_renungan()
+        {
+            $data['renungan']   = $this->admin_model->satu_renungan(uri3);
+            $this->view('admin/ubah_renungan', $data);
+        }
+
         public function tambah_warta_jemaat()
         {
             $this->view('admin/tambah_warta_jemaat');
@@ -181,5 +198,14 @@
 
             $this->model->close_conn();
             header("location: ".BASE_URL.'admin/warta-jemaat');
+        }
+
+        public function delete_renungan()
+        {
+            $this->model->where('id_renungan', uri3)
+                        ->delete('renungan');
+
+            $this->model->close_conn();
+            header("location: ".BASE_URL.'admin/renungan');
         }
     }

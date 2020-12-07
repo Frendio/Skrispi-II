@@ -23,12 +23,13 @@
 
         public function index()
         {
-
+            // set aturan main
             $this->form->input('tipe:Jenis kegiatan harus dipilih.,
                                 tempat:Tempat kegiatan harus diisi.,
                                 tanggal:Tanggal kegiatan harus diisi.,
                                 waktu:Waktu kegiatan harus dipilih.');
             
+            // validasi
             if($this->form->validate())
             {
                 $tipe       = $this->input->post('tipe');
@@ -36,6 +37,7 @@
                 $tanggal    = $this->input->post('tanggal');
                 $waktu      = $this->input->post('waktu');
 
+                // cek kalo kegiatan so ada
                 $result = $this->admin_model->kegiatan();
                 foreach($result as $row)
                 {
@@ -45,7 +47,7 @@
                     }
                 }
 
-                # insert new data kpp
+                # insert new data
                 $this->model->data('tanggal_kegiatan', $tanggal)
                             ->data('waktu_kegiatan', $waktu)
                             ->data('jenis_kegiatan', $tipe)

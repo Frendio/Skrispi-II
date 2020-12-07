@@ -39,8 +39,8 @@
 									</li>
 									<li class="m-nav__separator">-</li>
 									<li class="m-nav__item m-nav__item--home">
-										<a href="admin/sakit-meninggal" class="m-nav__link">
-											<span class="m-nav__link-text">Daftar sakit meninggal</span>									
+										<a href="admin/renungan" class="m-nav__link">
+											<span class="m-nav__link-text">Daftar renungan</span>									
 										</a>
 									</li>
 								</ul>
@@ -56,7 +56,7 @@
 											<i class="fa fa-plus"></i>
 										</span>
 										<h3 class="m-portlet__head-text">
-											Ubah sakit meninggal
+											Ubah renungan
 										</h3>
 									</div>
 								</div>
@@ -65,38 +65,37 @@
 							<div class="m-portlet__body">
 								<div class="tab-content">
 									<div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
-										<form class="m-form m-form--fit m-form--label-align-right" id="ubahSakitMeninggal">	
+										<form class="m-form m-form--fit m-form--label-align-right" id="ubahRenungan">	
 											<div class="form-group m-form__group row">
-												<label class="col-xl-2 col-lg-2 col-form-label">Nama anggota</label>
+												<label class="col-xl-2 col-lg-2 col-form-label">Judul renungan</label>
 												<div class="col-xl-10 col-lg-10">
-													<select class="form-control m-select2" name="nama" id="anggota" style="width:100%;">
-														<option></option>
-                                                        <?php foreach($anggota_jemaat as $row) { ?>
-                                                            <option value="<?php echo $row->nama_anggota; ?>" <?php selected($sm->nama_anggota, $row->nama_anggota) ?>><?php echo $row->nama_anggota; ?></option>
-                                                        <?php } ?>
-													</select>
-													<div class="m--font-danger ml_input_eh set_error" id="nama"></div>
+													<input class="form-control m-input" type="text" autocomplete="off" name="jr" placeholder="judul renungan" value="<?php echo $renungan->judul; ?>">
+													<input type="hidden" name="id" value="<?php echo $renungan->id_renungan; ?>">
+													<div class="m--font-danger ml_input_eh set_error" id="jr"></div>
 												</div>
 											</div>
 															
 											<div class="form-group m-form__group row">
-												<label class="col-xl-2 col-lg-2 col-form-label">Sakit / meninggal</label>
+												<label class="col-xl-2 col-lg-2 col-form-label">Ayat renungan</label>
 												<div class="col-xl-10 col-lg-10">
-                                                    <select class="form-control" name="tipe" style="width:100%;">
-                                                        <option value="" <?php selected($sm->jenis_status, ''); ?>>--- Sakit / meninggal ---</option>
-                                                        <option value="Sakit" <?php selected($sm->jenis_status, 'Sakit'); ?>>Sakit</option>
-                                                        <option value="Meninggal" <?php selected($sm->jenis_status, 'Meninggal'); ?>>Meninggal</option>
-													</select>
-													<div class="m--font-danger ml_input_eh set_error" id="tipe"></div>
+													<input class="form-control m-input" type="text" autocomplete="off" name="ar" placeholder="ayat renungan" value="<?php echo $renungan->ayat; ?>">
+													<div class="m--font-danger ml_input_eh set_error" id="ar"></div>
 												</div>
 											</div>
 															
 											<div class="form-group m-form__group row">
-												<label class="col-xl-2 col-lg-2 col-form-label">Keterangan</label>
+												<label class="col-xl-2 col-lg-2 col-form-label">Ringkasan</label>
 												<div class="col-xl-10 col-lg-10">
-													<input class="form-control m-input" type="text" autocomplete="off" name="keterangan" placeholder="keterangan" value="<?php echo $sm->keterangan; ?>">
-													<input type="hidden" name="id" value="<?php echo $sm->id_saj; ?>">
-													<div class="m--font-danger ml_input_eh set_error" id="keterangan"></div>
+													<textarea class="form-control m-input" type="text" autocomplete="off" name="ringkasan" placeholder="ringkasan"><?php echo $renungan->ringkasan; ?></textarea>
+													<div class="m--font-danger ml_input_eh set_error" id="ringkasan"></div>
+												</div>
+											</div>
+															
+											<div class="form-group m-form__group row">
+												<label class="col-xl-2 col-lg-2 col-form-label">Tanggal renungan</label>
+												<div class="col-xl-10 col-lg-10">
+													<input class="form-control m-input" type="date" autocomplete="off" name="tr" value="<?php echo $renungan->tanggal; ?>">
+													<div class="m--font-danger ml_input_eh set_error" id="tr"></div>
 												</div>
 											</div>
 
@@ -104,7 +103,7 @@
 												<div class="col-xl-2 col-lg-2"></div>
 												<div class="col-xl-10 col-lg-10 ca-btn">
 													<button class="btn btn-success m-btn m-btn--air m-btn--custom">
-														<i class="fa fa-plus"></i> &nbsp;Ubah
+														<i class="fa fa-edit"></i> &nbsp;Ubah
 													</button>
 												</div>
 											</div>

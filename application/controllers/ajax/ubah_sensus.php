@@ -85,6 +85,8 @@
                 $keluarga       = !empty($keluarga) ? $keluarga : 'null';
                 $kolom          = uc_all($this->input->post('kolom'));
                 $kolom          = !empty($kolom) ? $kolom : 'null';
+                $kategori       = $this->input->post('kategori');
+                $kategori       = !empty($kategori) ? $kategori : 'null';
 
                 $result = $this->admin_model->anggota_jemaat();
                 # cek kalo nomor baptis so ada
@@ -139,6 +141,7 @@
                             ->set('keterangan', $keterangan)
                             ->set('nama_keluarga', $keluarga)
                             ->set('nama_kolom', $kolom)
+                            ->set('kategori', $kategori)
                             ->where('id_anggota_jemaat', $id_AJ)
                             ->update('anggota_jemaat');
                 

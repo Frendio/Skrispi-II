@@ -50,6 +50,15 @@
                 </li>
 
                 <li class="m-menu__item <?php $this->left_menu->master_data(''); ?>" aria-haspopup="true">
+                    <a href="admin/renungan" class="m-menu__link ">
+                        <i class="m-menu__link-icon fa fa-database">
+                            <span></span>
+                        </i>
+                        <span class="m-menu__link-text">Daftar renungan</span>
+                    </a>
+                </li>
+
+                <li class="m-menu__item <?php $this->left_menu->master_data(''); ?>" aria-haspopup="true">
                     <a href="admin/user" class="m-menu__link ">
                         <i class="m-menu__link-icon fa fa-database">
                             <span></span>

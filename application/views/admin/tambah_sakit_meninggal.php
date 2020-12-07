@@ -83,7 +83,7 @@
 											</div>
 															
 											<div class="form-group m-form__group row">
-												<label class="col-xl-2 col-lg-2 col-form-label">Tipe user</label>
+												<label class="col-xl-2 col-lg-2 col-form-label">Sakit / meninggal</label>
 												<div class="col-xl-10 col-lg-10">
                                                     <select class="form-control" name="tipe" style="width:100%;">
                                                         <option value="">--- Sakit / meninggal ---</option>

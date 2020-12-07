@@ -15,7 +15,7 @@
         public function index()
         {
             # check if login
-            $this->session->login_check('un_auth', strtolower($this->session->get('un_auth')));
+            $this->session->login_check('un_auth', strtolower($this->session->get('ul_auth')));
 
             # load login view
             $this->view('login');

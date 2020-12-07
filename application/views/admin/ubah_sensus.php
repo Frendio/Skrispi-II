@@ -93,7 +93,7 @@
                                                                 <label for="exampleInputEmail1">Jenis kelamin</label>
                                                                 <select class="form-control" name="jk">
                                                                     <option value="" <?php selected($aj->jenis_kelamin, ''); ?>>--- Pilih jenis kelamin ---</option>
-                                                                    <option value="Laki laki" <?php selected($aj->jenis_kelamin, 'Laki laki'); ?>>Laki lakai</option>
+                                                                    <option value="Laki laki" <?php selected($aj->jenis_kelamin, 'Laki laki'); ?>>Laki laki</option>
                                                                     <option value="Perempuan" <?php selected($aj->jenis_kelamin, 'Perempuan'); ?>>Perempuan</option>
                                                                 </select>
                                                                 <div class="m--font-danger ml_input_eh set_error" id="jk"></div>
@@ -133,6 +133,16 @@
                                                                 <input type="text" class="form-control m-input" name="nk" placeholder="nama keluarga" value="<?php echo $aj->nama_keluarga; ?>">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="nk"></div>
                                                             </div>
+
+                                                            <div class="form-group m-form__group">
+                                                                <label for="exampleInputEmail1">Kategori</label>
+                                                                <select class="form-control" name="kategori">
+                                                                    <option value="" <?php selected($aj->kategori, ''); ?>>--- Pilih kategori ---</option>
+                                                                    <option value="Pembicara" <?php selected($aj->kategori, 'Pembicara'); ?>>Pembicara</option>
+                                                                    <option value="Non pembicara" <?php selected($aj->kategori, 'Non pembicara'); ?>>Non pembicara</option>
+                                                                </select>
+                                                                <div class="m--font-danger ml_input_eh set_error" id="kategori"></div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -158,7 +168,13 @@
 
                                                             <div class="form-group m-form__group">
                                                                 <label for="exampleInputEmail1">Golongan darah</label>
-                                                                <input type="text" class="form-control m-input" name="gol_dara" placeholder="golongan darah" value="<?php echo $aj->go_darah; ?>">
+                                                                <select class="form-control" name="gol_darah">
+                                                                    <option value="" <?php selected($aj->go_darah, ''); ?>>--- Pilih golongan darah ---</option>
+                                                                    <option value="A" <?php selected($aj->go_darah, 'A'); ?>>A</option>
+                                                                    <option value="AB" <?php selected($aj->go_darah, 'AB'); ?>>AB</option>
+                                                                    <option value="B" <?php selected($aj->go_darah, 'B'); ?>>B</option>
+                                                                    <option value="O" <?php selected($aj->go_darah, 'O'); ?>>O</option>
+                                                                </select>
                                                                 <div class="m--font-danger ml_input_eh set_error" id="gol_darah"></div>
                                                             </div>
 
@@ -216,13 +232,13 @@
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Nama pendeta</label>
+                                                                <label for="exampleInputEmail1">Nama pendeta yang membaptis</label>
                                                                 <input type="text" class="form-control m-input" name="np" placeholder="nama pendeta" value="<?php echo $aj->nama_pendeta_baptis; ?>">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="np"></div>
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Gereja / jemaat</label>
+                                                                <label for="exampleInputEmail1">Gereja / jemaat tempat dibaptis</label>
                                                                 <input type="text" class="form-control m-input" name="jemaat" placeholder="gereja" value="<?php echo $aj->jemaat_baptis; ?>">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="jemaat"></div>
                                                             </div>
@@ -251,13 +267,13 @@
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Nama pendeta</label>
+                                                                <label for="exampleInputEmail1">Nama pendeta yang men-sidi</label>
                                                                 <input type="text" class="form-control m-input" name="np_sidi" placeholder="nama pendeta sidi" value="<?php echo $aj->nama_pendeta_sidi; ?>">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="np_sidi"></div>
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Gereja / jemaat</label>
+                                                                <label for="exampleInputEmail1">Gereja / jemaat tempat SIDI</label>
                                                                 <input type="text" class="form-control m-input" name="jemaat_sidi" placeholder="jemaat sidi" value="<?php echo $aj->jemaat_sidi; ?>">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="jemaat_sidi"></div>
                                                             </div>

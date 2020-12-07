@@ -92,7 +92,7 @@
                                                                 <label for="exampleInputEmail1">Jenis kelamin</label>
                                                                 <select class="form-control" name="jk">
                                                                     <option value="">--- Pilih jenis kelamin ---</option>
-                                                                    <option value="Laki laki">Laki lakai</option>
+                                                                    <option value="Laki laki">Laki laki</option>
                                                                     <option value="Perempuan">Perempuan</option>
                                                                 </select>
                                                                 <div class="m--font-danger ml_input_eh set_error" id="jk"></div>
@@ -131,6 +131,16 @@
                                                                 <label for="exampleInputEmail1">Nama keluarga</label>
                                                                 <input type="text" class="form-control m-input" name="nk" placeholder="nama keluarga">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="nk"></div>
+                                                            </div>
+
+                                                            <div class="form-group m-form__group">
+                                                                <label for="exampleInputEmail1">Kategori</label>
+                                                                <select class="form-control" name="kategori">
+                                                                    <option value="">--- Pilih kategori ---</option>
+                                                                    <option value="Pembicara">Pembicara</option>
+                                                                    <option value="Non pembicara">Non pembicara</option>
+                                                                </select>
+                                                                <div class="m--font-danger ml_input_eh set_error" id="kategori"></div>
                                                             </div>
                                                             
                                                             <!-- <div class="form-group m-form__group">
@@ -171,7 +181,13 @@
 
                                                             <div class="form-group m-form__group">
                                                                 <label for="exampleInputEmail1">Golongan darah</label>
-                                                                <input type="text" class="form-control m-input" name="gol_dara" placeholder="golongan darah">
+                                                                <select class="form-control" name="gol_darah">
+                                                                    <option value="">--- Pilih golongan darah ---</option>
+                                                                    <option value="A">A</option>
+                                                                    <option value="AB">AB</option>
+                                                                    <option value="B">B</option>
+                                                                    <option value="O">O</option>
+                                                                </select>
                                                                 <div class="m--font-danger ml_input_eh set_error" id="gol_darah"></div>
                                                             </div>
 
@@ -228,13 +244,13 @@
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Nama pendeta</label>
+                                                                <label for="exampleInputEmail1">Nama pendeta yang membaptis</label>
                                                                 <input type="text" class="form-control m-input" name="np" placeholder="nama pendeta">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="np"></div>
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Gereja / jemaat</label>
+                                                                <label for="exampleInputEmail1">Gereja / jemaat tempat dibaptis</label>
                                                                 <input type="text" class="form-control m-input" name="jemaat" placeholder="gereja">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="jemaat"></div>
                                                             </div>
@@ -262,13 +278,13 @@
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Nama pendeta</label>
+                                                                <label for="exampleInputEmail1">Nama pendeta yang SIDI</label>
                                                                 <input type="text" class="form-control m-input" name="np_sidi" placeholder="nama pendeta sidi">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="np_sidi"></div>
                                                             </div>
 
                                                             <div class="form-group m-form__group">
-                                                                <label for="exampleInputEmail1">Gereja / jemaat</label>
+                                                                <label for="exampleInputEmail1">Gereja / jemaat tempat SIDI</label>
                                                                 <input type="text" class="form-control m-input" name="jemaat_sidi" placeholder="jemaat sidi">
                                                                 <div class="m--font-danger ml_input_eh set_error" id="jemaat_sidi"></div>
                                                             </div>

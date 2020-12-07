@@ -44,7 +44,7 @@
 						<a class="nav-link" href="beranda">Beranda<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-						<a class="nav-link" href="tentang_kami.html">Tentang Kami</a>
+						<a class="nav-link" href="beranda/tentang_kami">Tentang Kami</a>
 						</li>
 
 						<!-- <li class="nav-item">
@@ -139,7 +139,7 @@
 						<h2 class="ftco-heading-2"></h2>
 						<ul class="list-unstyled">
 							<li><a href="beranda" class="py-1 d-block"><span class=""></span></a></li>
-							<li><a href="tentang_kami.html" class="py-1 d-block"><span class=""></span></a></li>
+							<li><a href="beranda/tentang_kami" class="py-1 d-block"><span class=""></span></a></li>
 							<li><a href="info_jemaat.html" class="py-1 d-block"><span class=""></span</a></li>
 							<li><a href="jadwal_ibadah.html" class="py-1 d-block"><span class=""></span></a></li>
 

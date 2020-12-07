@@ -170,9 +170,9 @@
 			<a id="masuk" href="<?php echo BASE_URL.'admin'; ?>">Masuk Sebagai Admin</a>
 			<div id="links">
 				<div>Kunjungi Kami </div>
-				<a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.youtube.com/channel/UCMcv6gOJj4tL2pg9uOiVTOw" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+				<a href="https://web.facebook.com/groups/350495401673" target="_blank"><i class="fa fa-facebook"></i></a>
+				<!-- <a href=""><i class="fa fa-instagram"></i></a> -->
 			</div>
 		</div>
 	</body>

@@ -1,5 +1,4 @@
-function UT_data_return (r, d1, d2, d3) {
-    alert(r)
+function data_return (r, d1) {
     ML.clear_error('error_message');
     if(r.includes('|')) {
         if(r.split('|')[0] == '0')

@@ -23,10 +23,10 @@
 			bar_icon();
 		?>
 		
-		<marquee bgcolor="yellow">  - Telah Meninggal Dunia : Uzumaki Naruto umur 25 tahun.
+		<marquee bgcolor="yellow">  - Syalommm.
 		
 		
-		- Jemaat Mengalami Sakit : Uciha Sasuke sakit pada kepala. 
+		- Seputar Jemaat Bukit Moria Winangun : ---------------------------------------. 
 		</marquee>
 		<title>GEREJA | GMIM BUKIT MORIA WINANGUN</title>
 	</head>
@@ -46,7 +46,7 @@
 						<a class="nav-link" href="beranda">Beranda<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-						<a class="nav-link" href="tentang_kami.html">Tentang Kami</a>
+						<a class="nav-link" href="beranda/tentang_kami">Tentang Kami</a>
 						</li>
 
 						<!-- <li class="nav-item">
@@ -86,7 +86,7 @@
 							
 				
 							</p>
-							<p><a href="tentang_kami.html" class="btn btn-primary btn-outline-primary py-2 px-4">Tentang Kami</a> <a href="jadwal_ibadah.html" class="btn btn-primary btn-outline-primary py-2 px-4">Jadwal Ibadah</a></p>
+							<p><a href="beranda/tentang_kami" class="btn btn-primary btn-outline-primary py-2 px-4">Tentang Kami</a> <a href="beranda/#jadwal" class="btn btn-primary btn-outline-primary py-2 px-4">Jadwal Ibadah</a></p>
 						</div>
 					</div>
 				</div>
@@ -103,7 +103,7 @@
 
 							"Mememelihara Keutuhan Ciptaan"
 							</p>
-							<p><a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Tentang Kami</a> <a href="#" class="btn btn-primary btn-outline-primary py-2 px-4">Jadwal Ibadah</a></p>
+							<p><a href="beranda/tentang_kami" class="btn btn-primary btn-outline-primary py-2 px-4">Tentang Kami</a> <a href="beranda/#jadwal" class="btn btn-primary btn-outline-primary py-2 px-4">Jadwal Ibadah</a></p>
 						</div>
 					</div>
 				</div>			
@@ -119,12 +119,13 @@
 				</div>
 				<div class="col-md-6">
 				<div class="welcome_konten justify-content-end align-items-center">
-					<h4 class="heading"> Khotbah Minggu ini : <span>“Memelihara Kekudusan Perkawinan”
+					<h4 class="heading"> Khotbah Minggu ini : <span>“<?php echo $renungan->judul; ?>”
 
 
-					1 Korintus 7 : 1 -1</span>  </h4>
+					<?php echo $renungan->ayat; ?></span>  </h4>
 					<div class="welcome_text">
 					<p>
+						<?php echo $renungan->ringkasan; ?>
 					</p>
 					</div>
 				</div>
@@ -135,7 +136,7 @@
 			<div class="container">
 			<div class="home_heading text-center">
 				<span class="subheading">Informasi Jemaat</span>
-				<h2>Yang berulang tahun sepajang minggu ini</h2>
+				<h2>Selamat Ulang Tahun</h2>
 				<p>Bukit Moria Winangun</p>
 			</div>
 
@@ -174,6 +175,52 @@
 			</div>
 			</div>
 		</div>
+		<div class="berita_home">
+			<div class="container">
+			<div class="home_heading text-center">
+				<span class="subheading">Informasi Jemaat</span>
+				<h2>Jemaat Sakit & Meninggal</h2>
+				<p>Bukit Moria Winangun</p>
+			</div>
+
+			<div class="bh_konten">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="bh_item">
+							<table border="2" style="width:100%;">
+								<tr>
+									<th>No</th>
+									<th>Nama anggota jemaat</th>
+									<th>Sakit / meninggal</th>
+									<th>Keterangan</th>
+								</tr>
+
+								<?php
+									$no = 0;
+									foreach($SM_minggu as $row)
+									{
+										$no++;
+										$nama_anggota	= $row->nama_anggota;
+										$jenis_status	= $row->jenis_status;
+										$keterangan		= $row->keterangan;
+
+										?>
+
+										<tr>
+											<td><?php echo $no; ?></td>
+											<td><?php echo set_data($nama_anggota); ?></td>
+											<td><?php echo set_data($jenis_status); ?></td>
+											<td><?php echo set_data($keterangan); ?></td>
+										</tr>
+
+								<?php } ?>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
 
 		<section class="ftco-intro img" id="events-section" style="background-image: url(<?php echo IMAGES_PATH; ?>slider/3.jpeg);">
 			<div class="overlay"></div>
@@ -183,15 +230,15 @@
 			</div>
 		</section>
 
-		<section class="ftco-section bg-light ftco-event" id="events-section">
+		<section class="ftco-section bg-light ftco-event" id="jadwal">
 			<div class="container-fluid px-4 ftco-to-top">
 				<div class="row justify-content-center pb-5">
 				<div class="col-md-12 home_heading text-center ftco-animate">
-					<span class="subheading">Events</span>
+					<span class="subheading"></span>
 					<h2 id="jadwal" class="mb-5">Jadwal Ibadah & Pelayanan</h2>
 				</div>
 				</div>
-				<p class="mb-0"><a href="" class="btn btn-primary"></a></p>
+				<p class="mb-0"><a href="" class=""></a></p>
 
 				<div class="row">
 					<?php
@@ -218,11 +265,17 @@
 										<div>
 											<span class="time"><?php echo set_data($waktu_m.' - '.$waktu_s); ?></span>
 											<h4><a href="jadwal/<?php echo str_replace(' ', '-', $tipe_ibadah); ?>"><?php echo set_data($tipe_ibadah); ?></a></h4>
-											<div class="meta">
-												<p><span class="icon-user mr-1"></span> Khotbah: <a><?php echo set_data($khotbah); ?></a></p>
-												<p><span class="icon-location"></span> Location : <?php echo set_data($tempat_ibadah); ?></p>
-												<p class="mb-0"><?php echo set_data($catatan); ?></a></p>
-											</div>
+											<?php if(strtolower($tipe_ibadah) !== 'ibadah kolom') { ?>
+												<div class="meta">
+													<p><span class="icon-user mr-1"></span> Khotbah: <a><?php echo set_data($khotbah); ?></a></p>
+													<p><span class="icon-location"></span> Location : <?php echo set_data($tempat_ibadah); ?></p>
+													<p class="mb-0"><?php echo set_data($catatan); ?></a></p>
+												</div>
+											<?php } else { ?>
+												<div class="meta">
+													<p><span class="icon-user mr-1"></span><a href="jadwal/<?php echo str_replace(' ', '-', $tipe_ibadah); ?>">(Lihat daftar ibadah kolom)</a></p>
+												</div>
+											<?php } ?>
 										</div>
 									</div>
 								</div>
@@ -240,7 +293,7 @@
 				<div class="home_heading text-center">
 					<span class="subheading">---------------</span>
 					<h2>Daftar Kegiatan Jemaat</h2>
-					<p>-----------------------</p>
+					<p></p>
 				</div>
 
 				<div class="row">
@@ -293,12 +346,10 @@
 
 			<div class="ah_item">
 				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				The Christian Evangelical Church in Minahasa (Gereja Masehi Injii di Minahasa) is a Protestant, Calvinist and Reformed church in Indonesia. It was founded in North Sulawesi on 30 September 1934.
+Christianity was introduced to Minahasa by Johann Friedrich Riedel and Johann Gottlieb Schwarz. They were educated in the Netherlands and were sent by the Netherlands Missionary Society. By the 1880s the Christian population grew to 80,000. In 1876 it became part of the colonial state church the Protestant Church in Indonesia. The first synod was in 1934, at which it adopted its current name. Sister church relations were established with the Reformed Church in the Netherlands, Lutheran World Federation, Presbyterian Church in Korea, Reformed Church in America, and Uniting Church in Australia.
+Membership of the church is 850,000 in 839 parishes.
+The Christian Evangelical Church in Minahasa is a member of World Communion of Reformed Churches.
 				</p>
 
 				<a class="" href=""></a>
@@ -308,7 +359,7 @@
 		</div>
 			
 
-		<div class="video_home">
+		<!-- <div class="video_home">
 			<div class="container">
 			<div class="home_heading text-center">
 				<span class="subheading">Video</span>
@@ -319,7 +370,7 @@
 				<iframe width="100%" height="400" src="https://www.youtube.com/embed/sIaT8Jl2zpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			</div>
-		</div>
+		</div> -->
 
 
 
@@ -345,7 +396,7 @@
 						<h2 class="ftco-heading-2"></h2>
 						<ul class="list-unstyled">
 							<li><a href="beranda" class="py-1 d-block"><span class=""></span></a></li>
-							<li><a href="tentang_kami.html" class="py-1 d-block"><span class=""></span></a></li>
+							<li><a href="beranda/tentang_kami" class="py-1 d-block"><span class=""></span></a></li>
 							<li><a href="info_jemaat.html" class="py-1 d-block"><span class=""></span</a></li>
 							<li><a href="jadwal_ibadah.html" class="py-1 d-block"><span class=""></span></a></li>
 
@@ -361,9 +412,9 @@
 						<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Agenda Ibadah</h2>
 						<div class="opening-hours">
-							<p>Saturday Prayer Meeting: <span class="mb-3">10:00 am to 11:30 am</span></p>
+							<p><span class="mb-3"></span></p>
 							<p>Sunday Service: <span class="mb-3">8:30 am to 11:30 am</span></p>
-							<p>Monday Service: <span class="mb-3">8:30 am to 11:30 am</span></p>
+							<p> <span class="mb-3">8:30 am to 11:30 am</span></p>
 						</div>
 						</div>
 					</div>
